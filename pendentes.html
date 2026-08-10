@@ -1,15 +1,16 @@
-<!DOCTYPE html><html lang=pt-BR><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Contatos sem resposta</title>
+<!DOCTYPE html><html lang=pt-BR><head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><title>Contatos sem resposta</title>
 <style>body{margin:0;font-family:-apple-system,Segoe UI,Roboto,sans-serif;background:#0f1216;color:#e6e9ee;padding:18px}
 h1{font-size:19px;margin:0 0 4px}.sub{color:#9aa4b2;font-size:13px;margin-bottom:16px}
 .card{background:#171c22;border:1px solid #262d36;border-radius:12px;padding:14px 16px;margin-bottom:10px;display:flex;justify-content:space-between;gap:12px}
 .cli{font-weight:600}.t{font-weight:800;white-space:nowrap}.r90{color:#ef4444}.r30{color:#f59e0b}.r0{color:#3b82f6}
 .empty{color:#9aa4b2;font-style:italic;padding:20px 0}.tot{background:#f59e0b;color:#111;border-radius:20px;padding:2px 12px;font-weight:700;font-size:13px}</style></head><body>
-<h1>⏰ Contatos sem resposta (+20min)</h1><div class=sub id=sub></div><div id=app></div>
-<script>const D={"joao": {"nome": "João Pedro", "itens": [{"cliente": "Juliana Alves Ribeiro", "mins": 131, "num": "41999079542"}]}, "marcus": {"nome": "Marcus Vinicius", "itens": [{"cliente": "fernanda", "mins": 112, "num": "62981313798"}]}};const p=new URLSearchParams(location.search);const v=p.get('v');
+<h1>&#9200; Contatos sem resposta (+20min)</h1><div class=sub id=sub></div><div id=app></div>
+<script>const D={"joao": {"nome": "João Pedro", "itens": [{"cliente": "Juliana Alves Ribeiro", "mins": 279}, {"cliente": "Angela", "mins": 102}, {"cliente": "Barbara Concierge - Centrocor", "mins": 101}, {"cliente": "Almir - Heal/ EVAB", "mins": 92}]}, "marcus": {"nome": "Marcus Vinicius", "itens": [{"cliente": "fernanda", "mins": 260}, {"cliente": "Daniel Hoje Em Dia", "mins": 159}, {"cliente": "Déa Marisa | Nutrição em Geriatria", "mins": 113}, {"cliente": "Avantti Daniel Tinoco", "mins": 101}]}};const v=new URLSearchParams(location.search).get('v');
 function fmt(mn){const h=Math.floor(mn/60),m=mn%60;return (h?h+'h':'')+m+'min';}
 function cls(mn){return mn>=90?'r90':mn>=30?'r30':'r0';}
-const d=D[v];const app=document.getElementById('app');const sub=document.getElementById('sub');
-if(!d){sub.textContent='Vendedor não encontrado.';}else{
+const d=D[v],app=document.getElementById('app'),sub=document.getElementById('sub');
+if(!d){sub.textContent='Vendedor n\u00e3o encontrado.';}else{
  sub.innerHTML=d.nome+' &middot; <span class=tot>'+d.itens.length+' sem resposta</span>';
- app.innerHTML=d.itens.length?d.itens.map(x=>`<div class=card><span class=cli>${x.cliente}</span><span class="t ${cls(x.mins)}">${fmt(x.mins)}</span></div>`).join(''):'<div class=empty>Nenhum contato sem resposta 👏</div>';
-}</script></body></html>
+ app.innerHTML=d.itens.length?d.itens.map(x=>`<div class=card><span class=cli>${x.cliente}</span><span class="t ${cls(x.mins)}">${fmt(x.mins)}</span></div>`).join(''):'<div class=empty>Nenhum contato sem resposta &#128079;</div>';}
+</script></body></html>
