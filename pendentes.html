@@ -6,7 +6,7 @@ h1{font-size:19px;margin:0 0 4px}.sub{color:#9aa4b2;font-size:13px;margin-bottom
 .cli{font-weight:600}.t{font-weight:800;white-space:nowrap}.r90{color:#ef4444}.r30{color:#f59e0b}.r0{color:#3b82f6}
 .empty{color:#9aa4b2;font-style:italic;padding:20px 0}.tot{background:#f59e0b;color:#111;border-radius:20px;padding:2px 12px;font-weight:700;font-size:13px}</style></head><body>
 <h1>&#9200; Contatos sem resposta (+20min)</h1><div class=sub id=sub></div><div id=app></div>
-<script>const D={"joao": {"nome": "João Pedro", "itens": []}, "marcus": {"nome": "Marcus Vinicius", "itens": [{"cliente": "Weberton", "mins": 1116}, {"cliente": "Marcos", "mins": 949}, {"cliente": "Imunobr - Ser da Bahia", "mins": 871}, {"cliente": "Marco Aurelio Lopes Miranda", "mins": 774}, {"cliente": "LUCAS - CLINICA LUZES - 01.320.682/0001-82", "mins": 772}, {"cliente": "Valeska Barbosa", "mins": 698}, {"cliente": "Sonia Terezinha", "mins": 686}, {"cliente": "Psicóloga Sirlene Parraga", "mins": 657}, {"cliente": "Daylon Farias de Carvalho", "mins": 124}]}};const v=new URLSearchParams(location.search).get('v');
+<script>const D={"joao": {"nome": "João Pedro", "itens": [{"cliente": "Diego Torquatto", "mins": 1346}]}, "marcus": {"nome": "Marcus Vinicius", "itens": [{"cliente": "ANNA - IMASTO", "mins": 965}, {"cliente": "LUCAS - CLINICA LUZES - 01.320.682/0001-82", "mins": 955}, {"cliente": "Jose Fernandes", "mins": 506}, {"cliente": "Lídia Emanuela", "mins": 94}]}};const v=new URLSearchParams(location.search).get('v');
 function fmt(mn){const h=Math.floor(mn/60),m=mn%60;return (h?h+'h':'')+m+'min';}
 function cls(mn){return mn>=90?'r90':mn>=30?'r30':'r0';}
 const d=D[v],app=document.getElementById('app'),sub=document.getElementById('sub');
