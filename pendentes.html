@@ -6,7 +6,7 @@ h1{font-size:19px;margin:0 0 4px}.sub{color:#9aa4b2;font-size:13px;margin-bottom
 .cli{font-weight:600}.t{font-weight:800;white-space:nowrap}.r90{color:#ef4444}.r30{color:#f59e0b}.r0{color:#3b82f6}
 .empty{color:#9aa4b2;font-style:italic;padding:20px 0}.tot{background:#f59e0b;color:#111;border-radius:20px;padding:2px 12px;font-weight:700;font-size:13px}</style></head><body>
 <h1>&#9200; Contatos sem resposta (+20min)</h1><div class=sub id=sub></div><div id=app></div>
-<script>const D={"joao": {"nome": "João Pedro", "itens": []}, "marcus": {"nome": "Marcus Vinicius", "itens": [{"cliente": "Débora - OtorrinoMed Financeiro", "mins": 907}, {"cliente": "Dr. Paloma  - Clínica Cardioser - 01.894.953.0001/03", "mins": 907}, {"cliente": "559187036941", "mins": 906}, {"cliente": "Felipe TI - Universo Honda", "mins": 876}, {"cliente": "Jose Carlos Godoi", "mins": 841}, {"cliente": "Daniela - Dra Ultrassom - CMO - 060934030001-09", "mins": 819}, {"cliente": "Angela Figueiredo", "mins": 460}]}};const v=new URLSearchParams(location.search).get('v');
+<script>const D={"joao": {"nome": "João Pedro", "itens": [{"cliente": "Herica  - GRUPO DE APOIO CIRÚRGICO GASTROENTEROLOGIA", "mins": 1312}, {"cliente": "Casa das Estruturas", "mins": 663}]}, "marcus": {"nome": "Marcus Vinicius", "itens": [{"cliente": "Jaqueline  - Dr Sandro", "mins": 642}]}};const v=new URLSearchParams(location.search).get('v');
 function fmt(mn){const h=Math.floor(mn/60),m=mn%60;return (h?h+'h':'')+m+'min';}
 function cls(mn){return mn>=90?'r90':mn>=30?'r30':'r0';}
 const d=D[v],app=document.getElementById('app'),sub=document.getElementById('sub');
